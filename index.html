@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notebook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>📒 Notebook</h1>
+        <button id="new-note" title="New note">+</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search notes…">
+      </div>
+      <ul id="notes-list"></ul>
+    </aside>
+    <main class="editor">
+      <div id="empty-state" class="empty-state">
+        <p>Select a note or create a new one</p>
+      </div>
+      <div id="editor-area" class="editor-area hidden">
+        <input type="text" id="note-title" placeholder="Note title">
+        <textarea id="note-body" placeholder="Start writing…"></textarea>
+        <div class="editor-footer">
+          <span id="note-date"></span>
+          <button id="delete-note" class="delete-btn">Delete</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
