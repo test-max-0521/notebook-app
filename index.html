@@ -15,6 +15,28 @@
       </div>
       <div class="search-box">
         <input type="text" id="search" placeholder="Search notes…">
+        <div class="search-filters">
+          <select id="filter-notebook" title="Filter by notebook">
+            <option value="">All notebooks</option>
+          </select>
+          <select id="filter-tag" title="Filter by tag">
+            <option value="">All tags</option>
+          </select>
+          <div class="date-filters">
+            <input type="date" id="filter-date-from" title="Updated from date">
+            <input type="date" id="filter-date-to" title="Updated to date">
+          </div>
+        </div>
+        <div class="search-suggestions">
+          <div class="suggestion-block">
+            <p>Recent</p>
+            <div id="recent-searches" class="search-chip-list"></div>
+          </div>
+          <div class="suggestion-block">
+            <p>Frequent</p>
+            <div id="frequent-searches" class="search-chip-list"></div>
+          </div>
+        </div>
       </div>
       <ul id="notes-list"></ul>
     </aside>
@@ -24,7 +46,13 @@
       </div>
       <div id="editor-area" class="editor-area hidden">
         <input type="text" id="note-title" placeholder="Note title">
+        <div class="note-meta-grid">
+          <input type="text" id="note-notebook" placeholder="Notebook">
+          <input type="text" id="note-tags" placeholder="Tags (comma-separated)">
+          <input type="text" id="note-attachments" placeholder="Attachments (comma-separated)">
+        </div>
         <textarea id="note-body" placeholder="Start writing…"></textarea>
+        <textarea id="note-ocr" class="note-ocr" placeholder="OCR text from images (optional)"></textarea>
         <div class="editor-footer">
           <span id="note-date"></span>
           <button id="delete-note" class="delete-btn">Delete</button>
