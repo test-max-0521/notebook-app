@@ -16,6 +16,15 @@
       <div class="search-box">
         <input type="text" id="search" placeholder="Search notes…">
       </div>
+      <div class="collections" id="smart-collections">
+        <button type="button" data-collection="all" class="active">All notes</button>
+        <button type="button" data-collection="recent">Recent</button>
+        <button type="button" data-collection="week">Updated this week</button>
+      </div>
+      <div id="active-tag-filter" class="active-tag-filter hidden">
+        <span id="active-tag-filter-text"></span>
+        <button id="clear-tag-filter" type="button">Clear</button>
+      </div>
       <ul id="notes-list"></ul>
     </aside>
     <main class="editor">
@@ -24,7 +33,12 @@
       </div>
       <div id="editor-area" class="editor-area hidden">
         <input type="text" id="note-title" placeholder="Note title">
+        <input type="text" id="note-tags" placeholder="Tags (comma separated)">
         <textarea id="note-body" placeholder="Start writing…"></textarea>
+        <div id="backlinks" class="backlinks hidden">
+          <h3>Backlinks</h3>
+          <ul id="backlinks-list"></ul>
+        </div>
         <div class="editor-footer">
           <span id="note-date"></span>
           <button id="delete-note" class="delete-btn">Delete</button>

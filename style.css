@@ -88,6 +88,49 @@ body {
   color: var(--text-muted);
 }
 
+.collections {
+  padding: 0 16px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.collections button {
+  border: none;
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--sidebar-text);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.collections button.active {
+  background: var(--accent);
+  color: var(--sidebar-bg);
+}
+
+.active-tag-filter {
+  margin: 0 16px 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--sidebar-text);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.active-tag-filter button {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
 #notes-list {
   list-style: none;
   overflow-y: auto;
@@ -126,6 +169,23 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#notes-list li .note-item-tags {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#notes-list li .note-item-tags .note-tag {
+  border: none;
+  border-radius: 999px;
+  background: rgba(137, 180, 250, 0.2);
+  color: var(--accent);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  cursor: pointer;
 }
 
 #notes-list li .note-item-date {
@@ -171,6 +231,16 @@ body {
   color: var(--text);
 }
 
+#note-tags {
+  border: none;
+  outline: none;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  background: transparent;
+  font-family: inherit;
+}
+
 #note-body {
   flex: 1;
   border: none;
@@ -181,6 +251,37 @@ body {
   background: transparent;
   color: var(--text);
   font-family: inherit;
+}
+
+.backlinks {
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.backlinks h3 {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.backlinks ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.backlinks button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  cursor: pointer;
 }
 
 .editor-footer {
@@ -210,6 +311,10 @@ body {
 
 .delete-btn:hover {
   background: rgba(243, 139, 168, 0.1);
+}
+
+.hidden {
+  display: none;
 }
 
 /* Responsive */
