@@ -24,7 +24,26 @@
       </div>
       <div id="editor-area" class="editor-area hidden">
         <input type="text" id="note-title" placeholder="Note title">
-        <textarea id="note-body" placeholder="Start writing…"></textarea>
+        <div class="editor-tools">
+          <div class="mode-toggle" role="tablist" aria-label="Editor mode">
+            <button id="mode-write" class="mode-btn active" data-mode="write" type="button">Write</button>
+            <button id="mode-preview" class="mode-btn" data-mode="preview" type="button">Preview</button>
+          </div>
+          <label class="template-picker">
+            <span>Template</span>
+            <select id="note-template">
+              <option value="">Insert template…</option>
+              <option value="meeting">Meeting notes</option>
+              <option value="daily">Daily journal</option>
+              <option value="tasks">Task list</option>
+            </select>
+          </label>
+        </div>
+        <div class="editor-body">
+          <textarea id="note-body" placeholder="Start writing… (type / for commands)"></textarea>
+          <div id="markdown-preview" class="markdown-preview hidden" aria-live="polite"></div>
+          <div id="slash-menu" class="slash-menu hidden"></div>
+        </div>
         <div class="editor-footer">
           <span id="note-date"></span>
           <button id="delete-note" class="delete-btn">Delete</button>
